@@ -1,0 +1,110 @@
+@use './variables.scss' as var;
+
+%wh-100 {
+   width: 100%;
+   height: 100%;
+}
+
+%w-100 {
+   width: 100%;
+}
+
+%h-100 {
+   height: 100%;
+}
+
+%d-flex {
+   display: flex;
+}
+
+%d-block {
+   display: block;
+}
+
+%flex-cen {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+%flex-col {
+   display: flex;
+   flex-direction: column;
+}
+
+%flex-wrap {
+   flex-wrap: wrap;
+}
+
+%shrink0 {
+   flex-shrink: 0;
+}
+
+%jus-cen {
+   justify-content: center;
+}
+
+%jus-bet {
+   justify-content: space-between;
+}
+
+%jus-end {
+   justify-content: flex-end;
+}
+
+%jus-start {
+   justify-content: flex-start;
+}
+
+%ali-cen {
+   align-items: center;
+}
+
+%ali-start {
+   align-items: flex-start;
+}
+
+%ali-end {
+   align-items: flex-end;
+}
+
+%fit {
+   object-position: center;
+   object-fit: cover;
+}
+
+%abs {
+   position: absolute;
+}
+
+%rel {
+   position: relative;
+}
+
+%px-cen {
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+%py-cen {
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+%p-cen {
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+%m-cen {
+   margin: 0 auto;
+}
+
+%will {
+   will-change: transform;
+}
+
+%over {
+   overflow: hidden;
+}

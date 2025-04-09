@@ -1,0 +1,95 @@
+* {
+   box-sizing: border-box;
+}
+
+HTML, BODY {
+   height: 100%;
+   scroll-behavior: smooth;
+}
+
+BODY {
+   overflow-x: hidden;
+}
+
+HTML, BODY, UL, P, H1, H2, H3 {
+   padding: 0;
+   margin: 0;
+}
+
+IMG, IFRAME {
+   user-select: none;
+}
+
+UL, OL {
+   list-style-type: none;
+}
+
+A {
+   text-decoration: none; 
+   outline: none;
+}
+
+A, SPAN, P, H1, H2, H3, LI, STRONG, LABEL {
+   user-select: none;
+}
+
+INPUT, IFRAME {
+   border: none;
+   outline: none;
+}
+
+INPUT[type="number"]::-webkit-outer-spin-button,
+INPUT[type="number"]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+INPUT[type='number'],
+INPUT[type="number"]:hover,
+INPUT[type="number"]:focus {
+   appearance: none;
+   -moz-appearance: textfield;
+}
+
+BUTTON {
+   background: none;
+   border: none;
+   outline: none;
+   padding: 0;
+   cursor: pointer;
+   user-select: none;
+
+   * {
+      user-select: none;
+      pointer-events: none;
+   }
+}
+
+FIGURE {
+   margin: 0;
+
+   FIGCAPTION {
+      user-select: none;
+   }
+}
+
+ADDRESS {
+   font-style: normal;
+}
+
+.page-wrapper {
+   display: flex;
+   margin: 0 auto;
+   width: 1230px;
+   padding: 0 15px;
+   flex-direction: column;
+   position: relative;
+   min-height: 100vh;
+
+   .header, .main {
+      flex: 1 0 auto;
+   }
+
+   .footer {
+      flex: 0 0 auto;
+   }
+}

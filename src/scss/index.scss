@@ -1,0 +1,20 @@
+@use './normalize.scss' as *;
+@use './fonts.scss' as *;
+@use './variables.scss' as var;
+@use './templates.scss' as *;
+@use './mixins.scss' as mix;
+@use './common.scss' as *;
+
+
+
+// MEDIA QUERIES
+
+@media (min-width: 1441px) {}
+
+@media (max-width: 1200px) {}
+ 
+@media (max-width: 1024px) {}
+ 
+@media (max-width: 768px) {}
+ 
+@media (max-width: 565px) {}                                    
