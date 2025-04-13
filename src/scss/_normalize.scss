@@ -76,6 +76,12 @@ ADDRESS {
    font-style: normal;
 }
 
+FIELDSET, LEGEND {
+   margin: 0;
+   padding: 0;
+   border: none;
+}
+
 .page-wrapper {
    display: flex;
    margin: 0 auto;

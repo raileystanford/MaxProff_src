@@ -4,7 +4,527 @@
 @use './templates.scss' as *;
 @use './mixins.scss' as mix;
 
+.text1 {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
 
+.text2 {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.text3 {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.text4 {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.text5 {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.text6 {
+  font-family: 'Roboto';
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 70px;
+}
+
+.text7 {
+  font-family: 'Roboto';
+  font-size: 44px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text8 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 23px;
+}
+
+.text9 {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.text10 {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.navbar {
+
+  &__top, &__bottom {
+    @include mix.flex(wrap, 15px 48px);
+    @extend %rel;
+    @extend %ali-cen;
+    @extend %jus-cen;
+    padding: 25px 0px 22px 0px;
+
+    &::after {
+      content: '';
+      @extend %abs;
+      @extend %w-100;
+      bottom: 0;
+      left: 0;
+      height: 1.5px;
+      background: var.$green;
+    }   
+  }
+
+  &__company-logo {
+    margin: 2px 0 0 1px;
+  }
+
+  @at-root
+  .company-logo {
+    @extend %shrink0;
+    max-width: 125px;
+    height: 22px;
+
+    &__icon {
+      @extend %d-block;
+      @extend %wh-100;
+    }
+
+  }
+
+  &__navlinks {
+    margin: 6px 0 0 0;
+  }
+
+  @at-root
+  .navlinks {
+    @include mix.flex(wrap, 8px 24.5px);
+    max-width: 592.72px;
+
+    &__link {
+      padding: 5px 0px;
+      color: var.$black;
+    }
+  }
+
+  &__call {
+    @include mix.flex(wrap, 24px);
+    @extend %ali-cen;
+    width: fit-content;
+  }
+
+  &__call-block {
+    margin: 4px 0 0 0;
+  }
+
+  @at-root
+  .call-block {
+    @include mix.flex-col(4px);
+    max-width: 189.5px;
+
+    &__tel {
+      @include mix.flex(nowrap, 2px);
+      @extend %ali-cen;
+      color: var.$black;
+
+      &::before {
+        content: '';
+        @extend %shrink0;
+        @extend %rel;
+        width: 18px;
+        height: 18px;
+        top: 1.5px;
+        left: -1px;
+        background: url(../images/icons/call.png) 0 0 / contain no-repeat;
+      }
+    }
+
+    &__info {
+      color: var.$black;
+    }
+  }
+
+  @at-root
+  .button-outline {
+    @extend %flex-cen;
+    padding: 12px 22px;
+    border: 1px solid var.$green;
+    border-radius: 3px;
+    color: var.$green;
+  }
+
+  &__button-outline {
+    padding: 12.5px 22px 11.5px 22.5px;
+  }
+
+  &__bottom {
+    @extend %jus-bet;
+    @extend %ali-cen;
+    padding: 0px;
+    gap: 0px 10px;
+  }
+
+  @at-root
+  .dropdown-menu {
+    @include mix.flex(wrap, 0px);
+    // @extend %ali-cen;
+    max-width: 1000px;
+
+    &__item {
+      @extend %rel;
+      @extend %d-flex;
+      @extend %ali-cen;
+      min-height: 67px;
+    }
+
+    &__button {
+      @include mix.flex(nowrap, 5px);
+      @extend %flex-cen;
+      @extend %h-100;
+      margin: -1px 0 0 0;
+      width: 200px;
+      padding: 10px 20px;
+
+      &:hover {
+        background: var.$green;
+      }
+    }
+
+    &__item:first-child &__button {
+      width: 198px;
+    }
+
+    // &__item:first-child &__content {
+    //   visibility: visible;
+    // }
+    // &__item:nth-child(2) &__content {
+    //   visibility: visible;
+    // }
+
+    &__content {
+      @include mix.flex-col(0px);
+      @extend %abs;
+      @extend %vis0;
+      @extend %w-100;
+      left: 0;
+      top: 100%;
+      padding: 20px 16px;
+      background: var.$white;
+      box-shadow: 0px 0px 10px 0px var.$shadow1;
+    }
+
+    &__link {
+      color: var.$black;
+      padding: 10px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+
+      &:hover {
+        border-color: var.$green;
+      }
+    }
+
+    &__button-text {
+      color: var.$black;
+    }
+
+    &__button-icon {
+      @extend %shrink0;
+      margin: 1px 0 0 0;
+      width: 15px;
+      height: 15px;
+      fill: transparent;
+      stroke: var.$black;
+    }
+  }
+
+  &__lang-btn {
+    margin: 9px 0;
+  }
+
+  @at-root
+  .lang-btn {
+    @include mix.flex(nowrap, 15px);
+    padding: 8.5px 16.5px 7.5px 13.5px;
+    border: 1px solid var.$green;
+    border-radius: 3px;
+
+    &__variant {
+      @include mix.flex(nowrap, 15px);
+      color: var.$green;
+
+      &:not(:last-child)::after {
+        content: '';
+        @extend %shrink0;
+        margin: 1px 0 0 0;
+        width: 2px;
+        height: 25px;
+        background: var.$green;
+      }
+
+      &.active {
+        color: var.$black;
+      }
+    }
+  } 
+}
+
+.header-intro {
+  margin: 0 0 100px 0;
+  @extend %d-flex;
+  @extend %jus-cen;
+  @extend %rel;
+  @extend %px-cen;
+  padding: 12px 0;
+  width: 100vw;
+  background: url(../images/backgrounds/overlay.png) 0 0 / 80% 100% no-repeat, url(../images/backgrounds/background1.jpg) 0 0 / cover no-repeat;
+  
+  &__inner {
+    @include mix.flex(wrap, 50px);
+    @extend %jus-bet;
+    @extend %ali-start;
+    width: 1200px;
+  }
+
+  &__short-info {
+    margin: 18px 0 0 0;
+  }
+  
+  @at-root
+  .short-info {
+    @include mix.flex-col(79px);
+    max-width: 563px;
+
+    &__text {
+      @include mix.flex-col(17px);
+    }
+
+    &__title, &__subtitle {
+      color: var.$black;
+    }
+
+    &__subtitle {
+      word-spacing: -5px;
+      line-height: 70px;
+    }
+
+    &__benefits {
+      @include mix.flex(wrap, 26px 27px);
+    }
+  }
+
+  @at-root
+  .text-bg {
+    background: var.$green;
+    border-radius: 10px;
+    padding: 0 10px;
+    color: var.$white;
+    font-size: 58px;
+    box-decoration-break: clone; 
+  }
+
+  @at-root
+  .benefit {
+    @include mix.flex-col(9px);
+    width: 200px;
+
+    &__icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    &__caption {
+      color: var.$black;
+    }
+  }
+
+  &__ren-calc {
+    margin: 0 1px 0 0;
+  }
+
+  @at-root
+  .ren-calc {
+    @include mix.flex-col(29px);
+    background: var.$white;
+    border-radius: 7px;
+    width: 461px;
+    padding: 37.5px 28px 23px 28px;
+
+    &__title {
+      color: var.$black;
+      text-transform: uppercase;
+      margin: 0 0 0 1px;
+    }
+
+    &__controls-area {
+      @include mix.flex-col(19.5px);
+    }
+
+    &__block {
+      @include mix.flex-col(20px);
+      @extend %rel;
+      padding: 0 0 18px 0;
+
+      &:not(:last-child)::after {
+        content: '';
+        @extend %abs;
+        @extend %shrink0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.8px;
+        background: var.$silver2;
+      }
+
+      &--phone {
+
+        .ren-calc__block-name {
+          margin: 0 0 13px 0;
+        }
+
+      }
+    }
+
+    &__block-name {
+      margin: 0 0 18.5px 0;
+      color: var.$gray;
+    }
+
+    &__controls {
+      @include mix.flex(wrap, 10px 18px);
+    }
+
+    &__column {
+      @include mix.flex-col(9px);
+    }
+
+    &__row {
+      @include mix.flex(wrap, 10px 24px);
+    }
+
+    &__control {
+      width: 180px;
+
+      &--short {
+        width: auto;
+      }
+    }
+
+    &__radio {
+      @extend %abs;
+      @extend %vis0;
+    }
+
+    &__footer {
+      @include mix.flex-col(21px);
+    }
+
+    .specass {
+      height: 53px;
+      padding: 0;
+    }
+
+    &__summary {
+      @include mix.flex(wrap, 25px 94px);
+      background: var.$white2;
+      max-width: 461px;
+      margin: 0px -28px;
+      padding: 17px 33px;
+    }
+
+    &__summary-block {
+      @include mix.flex-col(2px);
+      max-width: 150px;
+    }
+
+    &__summary-title, &__summary-value {
+      color: var.$blue;
+    }
+
+    &__phone {
+      @include mix.flex(wrap, 14px);
+      @extend %ali-cen;
+    }
+
+    &__phone-input {
+      width: 204px;
+      height: 40px;
+      border: 1px solid var.$silver;
+      padding: 10px 12px 8px 12px;
+
+      &::placeholder {
+        color: var.$gray;
+      }
+    }
+  }
+
+  @at-root
+  .button {
+    @extend %flex-cen;
+    padding: 14px 27px 12px 27px;
+    background: var.$green;
+    border-radius: 4px;
+    color: var.$white;
+  }
+
+  @at-root
+  .custom-radio {
+    @include mix.flex(nowrap, 10px);
+    @extend %ali-cen;
+    width: fit-content;
+
+    &__icon {
+      @extend %flex-cen;
+      @extend %shrink0;
+      width: 18px;
+      height: 18px;
+      background: var.$white2;
+      border-radius: 50%;
+      border: 2px solid var.$silver;
+
+      &::after {
+        content: '';
+        @extend %vis0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var.$blue;
+      }
+
+      &.active {
+        background: var.$white2;
+        border-color: var.$blue;
+
+        &::after {
+          @extend %vis1;
+        }
+      }
+    }
+
+    &__text {
+      color: var.$gray;
+    }
+  }
+}
 
 // MEDIA QUERIES
 

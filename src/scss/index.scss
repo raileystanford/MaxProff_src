@@ -5,7 +5,9 @@
 @use './mixins.scss' as mix;
 @use './common.scss' as *;
 
-
+.header {
+  @include mix.flex-col(33px);
+}
 
 // MEDIA QUERIES
 
